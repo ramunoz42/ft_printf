@@ -21,6 +21,9 @@ int	print_pointer(va_list args)
 	int				count;
 
 	ptr = va_arg(args, void *);
+	if (!ptr)
+		write(1, "(nil)", 5);
+		return (5);
 	addr = (unsigned long)ptr;
 	count = 0;
 	write(1, "0x", 2);
